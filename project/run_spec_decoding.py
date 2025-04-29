@@ -35,11 +35,9 @@ class InferenceCLI:
         self.dr = False
         self.cache = False
         self.target_gen = True
-        # Ngram Assisted Generation
-        self.top_k_filler = 3
         self.reset_in_between = True
         
-        self.chat = True # If using a chat instructed model, set to True
+        self.chat = True
         
         self.processors = {
             "greedy": {
@@ -254,13 +252,13 @@ class InferenceCLI:
             )
             end_time = time.time()
             output = self.tokenizer.decode(output_ids, skip_special_tokens=True)
-            print(colored("=========== Target AR ===========", "blue"))
-            print(colored("Out:", "blue"), output)
+            print(colored("=========== Target AR ===========", "orange"))
+            print(colored("Out:", "orange"), output)
             base_throughput = len(output) / (end_time - start_time)
-            print(colored(f"Throughput: {base_throughput:.1f} tokens/s", "blue"))
-            print(colored("=========== Target AR ===========", "blue"))
+            print(colored(f"Throughput: {base_throughput:.1f} tokens/s", "orange"))
+            print(colored("=========== Target AR ===========", "orange"))
             if self.spec and base_throughput > 0.0:
-                print(colored(f"Throughput increase: {((spec_throughput / base_throughput)) * 100:.1f}%", "magenta"))
+                print(colored(f"Throughput increase: {((spec_throughput - base_throughput) / base_throughput) * 100:.1f}%", "pink"))
 
         if self.dr:
             self._set_seed(42)

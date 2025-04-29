@@ -39,7 +39,7 @@ Throughput: 16.6 tokens/s
 ## Features
 - MiniTorch Backend: PyTorch-style framework for autodiff, tensor ops, and model building
 - CUDA Kernels: Custom fast kernels for softmax, layernorm, and tensor ops
-- Benchmark: Evaluate on GSM8K and LIMO
+- Benchmark: Evaluation on GSM8K and LIMO
 
 ## Quickstart
 ```

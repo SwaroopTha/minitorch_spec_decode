@@ -30,6 +30,7 @@ pip install -e .
 ```
 
 ### Compile CUDA Kernels:
+Not required unless additional kernels were implemented
 ```
 bash compile_cuda.sh
 ```

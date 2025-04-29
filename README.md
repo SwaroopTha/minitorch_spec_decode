@@ -50,5 +50,9 @@ python project/run_spec_decoding.py
 
 <a id="4">[4]</a> Rush, S., Gao, G., Abilov, A., and Gokaslan., A. Minitorch, 2021. URL https://minitorch.org.
 
+<a id="5">[5]</a> Ye, Y., Huang, Z., Xiao, Y., Chern, E., Xia, S., and Liu, P. Limo: Less is more for reasoning, 2025. URL https://arxiv.org/abs/2502.03387.
+
+<a id="6">[6]</a> Gao, X., Xie, W., Xiang, Y., and Ji, F. Falcon: Faster and parallel inference of large language models through enhanced semi-autoregressive drafting and custom-designed decoding tree, 2024. URL https://arxiv.org/abs/2412.12639
+
 ### Acknowledgements
 We would like to thank [Romsto](https://github.com/romsto) and [Feifeibear](https://github.com/feifeibear) for their work, which has given us a structure to work off of.

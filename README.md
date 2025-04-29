@@ -46,5 +46,4 @@ python project/run_spec_decoding.py
 <a id="2">[2]</a> Chen, C., Borgeaud, S., Irving, G., Lespiau, J. B., Sifre, L., & Jumper, J. (2023). Accelerating large language model decoding with speculative sampling. arXiv preprint arXiv:2302.01318. 
 
 ### Acknowledgements
-We'd like to thank [Romsto](https://github.com/romsto) for providing an interesting interface that served as a basis for some aspects of this project.
-
+We would like to thank [Romsto](https://github.com/romsto) and [Feifeibear](https://github.com/feifeibear) for their work, which has given us a structure to work off of.

@@ -10,6 +10,14 @@ This project implements speculative decoding for reasoning tasks (e.g., GSM8K) u
   </tr>
 </table>
 
+### Results on LIMO
+<table style="width: 80%; margin-left: auto; margin-right: auto;">
+  <tr>
+    <td style="text-align: center;"><img src="imgs/limo_throughput.png" style="max-width: 200px; max-height: 200px; height: auto; width: auto;"></td>
+    <td style="text-align: center;"><img src="imgs/limo_latency.png" style="max-width: 200px; max-height: 200px; height: auto; width: auto;"></td>
+  </tr>
+</table>
+
 The project builds a modular speculative decoding pipeline with CUDA acceleration, targeting reasoning task.
 
 ## Features
@@ -39,6 +47,25 @@ bash compile_cuda.sh
 ```
 python project/run_spec_decoding.py
 ```
+
+Example for a 100 token limit:
+```
+> Who is better Ronaldo or Messi?
+========== Speculative ==========
+Out: Okay, so I need to figure out whether Ronaldo or Messi is better. Hmm, both are big names in football, but I'm not sure how to compare them. Let me start by recalling what I know about each of them.
+
+Ronaldo, I think, is from Brazil. He's been playing for a long time, maybe 15 years or more. He's known for his skills, especially in the Air, which is a term I've heard in relation to football.
+Acceptance rate: 1.000
+Throughput: 19.3 tokens/s
+=========== Target AR ===========
+Out: Okay, so I need to figure out who is better between Ronaldo and Messi. Hmm, both are incredible players, but I'm not sure how to compare them. Let me think about their styles first. Ronaldo plays as a striker, right? He's known for his speed and powerful strikes. Messi, on the other hand, is a midfielder who plays in a more advanced role but can also score goals. 
+
+I guess their strengths are different. Ronaldo's strength is his finishing and ability to run
+Throughput: 16.6 tokens/s
+```
+
+
+
 
 
 ## References

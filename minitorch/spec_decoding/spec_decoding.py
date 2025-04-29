@@ -163,16 +163,11 @@ def spec_gen(
                 past_key_values=target_cache,
                 use_cache=use_cache
             )
-            # Mp = target(
-            #     input_ids=torch.tensor(input_ids, dtype=torch.int64, device='cuda')[:, :curr_pos + corrected_gamma],  # .to_numpy()
-            #     past_key_values=target_cache,
-            #     use_cache=use_cache
-            # )
+
             target_cache = Mp.past_key_values
             arr = Mq.logits[..., curr_pos - 1:curr_pos + corrected_gamma - 1, :vocab_size].cpu().numpy()  # just once, no .tolist()
             # draft_logits = Mp.logits[..., curr_pos - 1:curr_pos + corrected_gamma - 1, :vocab_size]
             # convert torch tensor to minitorch tensor
-            # draft_logits = tensor(draft_logits, backend)
             draft_logits = tensor_from_numpy(arr, backend) 
             p = logits_processor(draft_logits)
             # time8 = time.time()
@@ -247,8 +242,7 @@ def spec_gen(
 
             # print("x: ", x)
             # print("stop_tokens: ", stop_tokens)
-            # if isinstance(x, Tensor):
-            #     x = x.item()
+
             if x in stop_tokens:
                 # print("stop_tokens found")
                 # output = list(map(int, input_ids[0, prompt_len:curr_pos].to_numpy().tolist()))
@@ -275,9 +269,7 @@ def spec_gen(
             curr_pos += 1
 
             if x in stop_tokens:
-                # output = list(map(int, input_ids[0, prompt_len:curr_pos].to_numpy().tolist()))
                 output = input_ids_np[0, prompt_len:curr_pos].tolist()
-                # return input_ids[0][prompt_len:curr_pos], drafts_accepted / drafts_speculated  replaced
                 return output, drafts_accepted / drafts_speculated
         # print("input_ids: ", input_ids)
         # print("prompt_len: ", prompt_len)
@@ -285,7 +277,6 @@ def spec_gen(
 
     # print("input_ids: ", input_ids)
     # print("input_ids dtype: input_ids.dtype")
-    # output = list(map(int, input_ids[0, prompt_len:].to_numpy().tolist()))
     output = input_ids_np[0, prompt_len:].tolist()
     return output, drafts_accepted / drafts_speculated if drafts_speculated > 0 else 0.0
 

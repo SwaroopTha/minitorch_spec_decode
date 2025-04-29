@@ -46,5 +46,9 @@ python project/run_spec_decoding.py
 
 <a id="2">[2]</a> Chen, C., Borgeaud, S., Irving, G., Lespiau, J. B., Sifre, L., & Jumper, J. (2023). Accelerating large language model decoding with speculative sampling. arXiv preprint arXiv:2302.01318. 
 
+<a id="3">[3]</a> Cobbe, K., Kosaraju, V., Bavarian, M., Chen, M., Jun, H., Kaiser, L., Plappert, M., Tworek, J., Hilton, J., Nakano, R., Hesse, C., and Schulman, J. Training verifiers to solve math word problems, 2021. URL https://arxiv.org/abs/2110.14168.
+
+<a id="4">[4]</a> Rush, S., Gao, G., Abilov, A., and Gokaslan., A. Minitorch, 2021. URL https://minitorch.org.
+
 ### Acknowledgements
 We would like to thank [Romsto](https://github.com/romsto) and [Feifeibear](https://github.com/feifeibear) for their work, which has given us a structure to work off of.

@@ -258,7 +258,7 @@ class InferenceCLI:
             print(colored(f"Throughput: {base_throughput:.1f} tokens/s", "orange"))
             print(colored("=========== Target AR ===========", "orange"))
             if self.spec and base_throughput > 0.0:
-                print(colored(f"Throughput increase: {((spec_throughput - base_throughput) / base_throughput) * 100:.1f}%", "pink"))
+                print(colored(f"Throughput increase: {((spec_throughput - base_throughput) / base_throughput) * 100:.1f}%", "magenta"))
 
         if self.dr:
             self._set_seed(42)

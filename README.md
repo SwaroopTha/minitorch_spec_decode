@@ -1,4 +1,4 @@
-# Speculative Decoding on Reasoning with MiniTorch
+# Speculative Decoding on Reasoning Tasks with MiniTorch
 
 This project implements speculative decoding for reasoning tasks (e.g., GSM8K) using a custom framework known as MiniTorch. We utilized the DeepSeek-R1 family to select target and draft models for this particular experiment
 
